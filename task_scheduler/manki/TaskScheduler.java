@@ -18,11 +18,6 @@ public class TaskScheduler {
 	}
 
 	public static int leastInterval(char[] tasks, int n) {
-		if (tasks.length == 0)
-			return 0;
-		if (n < 0)
-			return 0;
-
 		Queue<Integer> jobs = new PriorityQueue<>();
 		Map<Character, Integer> taskIntervalMap = new HashMap<>();
 
