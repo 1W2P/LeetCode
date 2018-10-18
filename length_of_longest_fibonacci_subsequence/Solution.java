@@ -6,7 +6,7 @@ public class Solution {
     // [1,2,3,5,8]
     int[] test2 = { 1, 3, 7, 11, 12, 14, 18 };// 3
     // [1,11,12], [3,11,14] or [7,11,18].
-    // System.out.println(lenLongestFibSubseq(test1));
+    System.out.println(lenLongestFibSubseq(test1));
     System.out.println("===========================");
     System.out.println(lenLongestFibSubseq(test2));
   }
