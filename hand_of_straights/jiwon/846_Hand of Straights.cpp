@@ -17,6 +17,7 @@ public:
                 if(next->second == 0) cntMap.erase(next);
             }
         }
+        
         return true;
     }
 };
