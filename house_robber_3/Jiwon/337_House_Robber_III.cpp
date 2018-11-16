@@ -7,6 +7,9 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
+// cache 432 ms -> 16ms
+
 class Solution {
 public:
     
