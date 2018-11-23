@@ -15,10 +15,6 @@ public:
         
         int first, last;
         
-        for(int i=0; i<rightOrder.size(); i++) {
-            cout << rightOrder[i] << ' ';
-        }
-        
         for(int i=0; i<nums.size(); i++) {
             if(rightOrder[i] != nums[i]) {
                 first = i;
@@ -33,7 +29,6 @@ public:
             }
         }
         
-        cout << last - first + 1;
         return last - first + 1;
     }
 };
