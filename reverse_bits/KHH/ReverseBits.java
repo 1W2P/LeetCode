@@ -8,13 +8,13 @@ class ReverseBits
 
     public static int reverseBits(int n) {
         int result = 0;
-        int temp = 1;
-        n = ~n;
+        int bit = 1;
+
         for(int i = 31; i >= 0; --i)
         {
-            if((n<<31) == 0)
+            if((n&1) == 1)
             {
-                result = result|(temp<<i);
+                result = result|(bit << i);
             }
             n >>= 1;
         }
