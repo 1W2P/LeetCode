@@ -12,7 +12,6 @@ public:
         nums.erase(find(nums.begin(), nums.end(), 0));
         cnt++;
       }
-
       for(int i=0; i<cnt; i++) {
         nums.push_back(0);
       }
