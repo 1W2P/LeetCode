@@ -10,35 +10,33 @@ class PalindromicSubstrings
     public static int countSubstrings(String s) 
     {
         StringBuilder sb = new StringBuilder(s);
-        Map<String,Integer> map = new HashMap<>();
+        Set<String> set = new HashSet<>();
+
         String target;
         int length = sb.length();
-        
+        int count = 0;
+
         for(int i = 0; i < length; ++i)
         {  
             for(int j = (i + 1); j <= length; ++j)
             {
                 target = sb.substring(i,j);
 
-                if (null != map.get(target))
+                if (set.contains(target))
                 {
-                    map.put(target, map.get(target) + 1);
+                    ++count;
                 }
                 else
                 {
-                    if(isPalindromic(target))
+                    if(target.equals(new StringBuilder(target).reverse().toString()))
                     {
-                        map.put(target, 1);
+                        map.add(target);
+                        ++count;
                     }
                 }
             }
         }
-        return map.values().stream().mapToInt(i->i).sum();
-    }
-
-    public static boolean isPalindromic(String str)
-    {
-        String reverse = new StringBuilder(str).reverse().toString();
-        return str.equals(reverse);
+        
+        return count;
     }
 }
