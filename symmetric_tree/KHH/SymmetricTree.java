@@ -5,9 +5,9 @@ class Solution
 {
     public boolean isSymmetric(TreeNode root) {
         if(null == root) return true;
-        else return isEqule(root.left,  root.right);
+        else return isEquals(root.left,  root.right);
     }
-    public static boolean isEqule(TreeNode left, TreeNode right)
+    public static boolean isEquals(TreeNode left, TreeNode right)
     {
         if (null == left)
         {
@@ -20,7 +20,7 @@ class Solution
                 return false;
             else if(left.val == right.val)
             {
-                return isEqule(left.left, right.right) && isEqule(left.right, right.left);
+                return isEquals(left.left, right.right) && isEquals(left.right, right.left);
             }
             else return false;
         }
