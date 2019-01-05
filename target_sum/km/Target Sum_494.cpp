@@ -9,39 +9,36 @@ class Solution {
 private:
 	int s_;
 	int result_ = 0;
+	int nums_size_;
+	vector<int> nums_;
 public:
 	int findTargetSumWays(vector<int>& nums, int S)
 	{
 		int sum = 0;
 		s_ = S;
 
-		recursion(nums, sum);
+		nums_ = nums;
+		nums_size_ = nums.size();
+
+		recursion(0, sum);
 
 		return result_;
 	}
 
-	void recursion(vector<int> remains, int curr_sum)
+	void recursion(int index, int curr_sum)
 	{
-		vector<int> v;
-		int value;
-
-		if (curr_sum == s_ && remains.empty())
+		if (index == nums_size_)
 		{
-			result_++;
+			if (curr_sum == s_)
+			{
+				result_++;
+			}
+
 			return;
 		}
 
-		if (remains.empty())
-		{
-			return;
-		}
-
-		v = remains;
-		value = v[0];
-		v.erase(v.begin());
-
-		recursion(v, curr_sum + value);
-		recursion(v, curr_sum - value);
+		recursion(index+1, curr_sum + nums_[index]);
+		recursion(index + 1, curr_sum - nums_[index]);
 	}
 };
 
