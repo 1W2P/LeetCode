@@ -1,0 +1,3 @@
+﻿  algo_646.cpp
+c:\users\최효린\desktop\leealgorith\algo_646\algo_646\algo_646.cpp(29): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int **'입니다.
+  algo_646.vcxproj -> C:\Users\최효린\Desktop\leealgorith\algo_646\Debug\algo_646.exe
